@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>demo4</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{background-color: #ccc;}
+            #c1{background-color: #fff;}
+        </style>
+        <script>
+            window.onload = function () {
+                var oC = document.getElementById("c1");
+                var oGc = oC.getContext("2d");
+                oGc.rect(100, 100, 100, 100);
+                oGc.fillStyle = "green";
+                //oGc.clearRect(oGc.width,oGc.height);
+                oGc.fill();
+            };
+        </script>
+    </head>
+    <body>
+        <canvas id="c1" width="400" height="400"></canvas>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>domo2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{background-color:#666;}
+            #c1{background-color:#fff;}
+        </style>
+        <script>
+            window.onload = function () {
+                var oC = document.getElementById("c1");
+                var oGc = oC.getContext("2d");
+                oGc.fillStyle = "red";
+                oGc.lineWidth = 20;
+                oGc.strokeStyle = "green";
+                oGc.lineJoin = "bevel";
+                //oGc.lineJoin = "round";
+                oGc.strokeRect(50, 50, 50, 50);
+                oGc.fillRect(50, 50, 50, 50);
+            };
+        </script>
+    </head>
+    <body>
+        <canvas id="c1" width="400" height="400"></canvas>
+    </body>
+</html>

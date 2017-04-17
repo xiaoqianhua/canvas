@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>domo-3</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{background-color:#abcdef;}
+            #c1{background-color:#fff;}
+        </style>
+        <script>
+            window.onload = function () {
+                var oC = document.getElementById("c1");
+                var oGc = oC.getContext("2d");
+                oGc.beginPath();
+                oGc.moveTo(50, 50);
+                oGc.lineTo(100, 100);
+                oGc.lineTo(200, 100);
+//                oGc.lineWidth = 5;
+//                oGc.lineCap = "round";
+                oGc.fillStyle = "red";
+                oGc.save();
+                //oGc.save();
+                //oGc.restor();
+                oGc.closePath();
+                oGc.fill();
+
+                oGc.beginPath();
+                oGc.moveTo(100, 100);
+                oGc.lineTo(200, 300);
+                oGc.lineTo(300, 300);
+                oGc.closePath();
+                oGc.fill();
+            };
+        </script>
+    </head>
+    <body>
+        <canvas id="c1" width="400" height="400"></canvas>
+    </body>
+</html>

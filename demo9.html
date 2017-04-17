@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>demo9</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #c1{background-color: #abcdef;}
+        </style>
+        <script>
+            window.onload=function(){
+               var oC=document.getElementById("c1");
+               oGC=oC.getContext("2d");
+               oGC.fillStyle="pink";
+               oGC.fill();
+               oGC.fillRect(0,0,50,50);
+               var num=0;
+               setInterval(function(){
+                   num++;
+                   oGC.clearRect(0,0,oC.width,oC.height);
+                   oGC.fillRect(num,num,50,50);
+               },30);
+            };
+        </script>
+    </head>
+    <body>
+        <canvas id="c1" width="400" height="400"></canvas>
+    </body>
+</html>

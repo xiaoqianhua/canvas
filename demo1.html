@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>circle</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #c1{background-color: green;}
+        </style>
+        <script>
+            window.onload = function () {
+                var oC = document.getElementById("c1");
+                var oGC = oC.getContext("2d");
+                oGC.moveTo(200, 200);
+                //arc(x,y,半径，起始弧度，结束弧度，旋转方向)     
+                // 弧度与角度的关系：弧度=角度*Math.PI/180
+                //旋转方向：顺时针（默认：false）、逆时针（true)
+                oGC.arc(200, 200, 150, 0, 360 * Math.PI / 180, false);
+                oGC.closePath();
+                oGC.stroke();
+            };
+        </script>
+    </head>
+    <body>
+        <canvas id="c1" width="400" height="400"></canvas>
+    </body>
+</html>
